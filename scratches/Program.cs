@@ -72,20 +72,20 @@ Console.WriteLine("Введите элементы нового массива �
 string[] newArray = Console.ReadLine().Split(" ");
 Console.WriteLine();
 
-int x = NumberOfShort(newArray);
 int y = 3;
+int x = NumberOfShort(newArray, y);
 
 string[] newArrayShort = CreateArrayOfShortElements(newArray, x, y);
 
 Console.WriteLine("Массив из элементов заданного массива, длина которых не превышает 3:");
 PrintArray(newArrayShort);
 
-int NumberOfShort (string [] inarray)
+int NumberOfShort (string [] inarray, int shortsize)
 {
     int shortElements = 0;
-    for (int i1 = 0; i1 < inarray.Length; i1++)
+    for (int i = 0; i < inarray.Length; i++)
     {
-        if (inarray[i1].Length <= 3)
+        if (inarray[i].Length <= shortsize)
         {
             shortElements++;
         }
@@ -111,9 +111,9 @@ string [] CreateArrayOfShortElements (string[] originalArray, int numberofshort,
 
 void PrintArray(string[] array)
 {
-    for (int m = 0; m < array.Length; m++)
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(array[m] + " ");
+        Console.Write(array[i] + " ");
     }
     Console.WriteLine();
 }
