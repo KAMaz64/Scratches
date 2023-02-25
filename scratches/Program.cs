@@ -73,17 +73,18 @@ string[] newArray = Console.ReadLine().Split(" ");
 Console.WriteLine();
 
 int y = 3;
-int x = NumberOfShort(newArray, y);
+int len = newArray.Length;
+int x = NumberOfShort(newArray, len, y);
 
-string[] newArrayShort = CreateArrayOfShortElements(newArray, x, y);
+string[] newArrayShort = CreateArrayOfShortElements(newArray, len, x, y);
 
 Console.WriteLine("Массив из элементов заданного массива, длина которых не превышает 3:");
 PrintArray(newArrayShort);
 
-int NumberOfShort (string [] inarray, int shortsize)
+int NumberOfShort (string [] inarray, int inarraylen, int shortsize)
 {
     int shortElements = 0;
-    for (int i = 0; i < inarray.Length; i++)
+    for (int i = 0; i < inarraylen; i++)
     {
         if (inarray[i].Length <= shortsize)
         {
@@ -93,16 +94,16 @@ int NumberOfShort (string [] inarray, int shortsize)
     return shortElements; 
 }
 
-string [] CreateArrayOfShortElements (string[] originalArray, int numberofshort, int sizeofshort)
+string [] CreateArrayOfShortElements (string[] originalarray, int originalarraylen, int numberofshort, int sizeofshort)
 {
     int j = 0;
     string[] shortArray = new string[numberofshort];
 
-    for (int i = 0; i < originalArray.Length; i++)
+    for (int i = 0; i < originalarraylen; i++)
     {
-        if (originalArray[i].Length <= sizeofshort)
+        if (originalarray[i].Length <= sizeofshort)
         {
-            shortArray[j] = originalArray[i];
+            shortArray[j] = originalarray[i];
             j++;
         }
     }
