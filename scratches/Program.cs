@@ -67,9 +67,9 @@ void PrintArray(string[] array)
 
 Console.Clear();
 
-Console.WriteLine("Введите элементы нового массива через пробел");
+Console.WriteLine("Введите элементы нового массива через запятую и пробел");
 
-string[] newArray = Console.ReadLine().Split(" ");
+string[] newArray = Console.ReadLine().Split(", ");
 Console.WriteLine();
 
 int y = 3;
