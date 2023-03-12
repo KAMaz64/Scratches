@@ -9,7 +9,7 @@
 
 ¬ыбираем вариант с вводом заданного массива **newArray** с клавиатуры через зап€тую и пробел, дл€ этого прописываем следующее:
 
-```
+```c#
 Console.WriteLine("¬ведите элементы нового массива через зап€тую и пробел");
 
 string[] newArray = Console.ReadLine().Split(", ");
@@ -31,7 +31,7 @@ Console.WriteLine();
 ƒл€ определени€ длины нового массива нам потребуетс€ метод с использованием  цикла **for**, параметрами которого будут первоначально заданный массив; длина данного массива; предельна€ величина элементов массива (в нашем случае - 3):
 
  од метода:
-```
+```c#
 int NumberOfShort (string [] inarray, int inarraylen, int shortsize)
 {
     int shortElements = 0;
@@ -53,7 +53,7 @@ int NumberOfShort (string [] inarray, int inarraylen, int shortsize)
 
  од метода:
 
-```
+```c#
 string [] CreateArrayOfShortElements (string[] originalarray, int originalarraylen, int numberofshort, int sizeofshort)
 {
     int j = 0;
@@ -77,7 +77,7 @@ string [] CreateArrayOfShortElements (string[] originalarray, int originalarrayl
 
  од метода:
 
-```
+```c#
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -94,7 +94,7 @@ void PrintArray(string[] array)
 
  од:
 
-```
+```c#
 int y = 3;
 int len = newArray.Length;
 int x = NumberOfShort(newArray, len, y);
